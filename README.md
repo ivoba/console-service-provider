@@ -2,6 +2,8 @@
 
 Provides a `Symfony\Component\Console` based console for Silex.
 
+[![Build Status](http://img.shields.io/travis/ivoba/console-service-provider.svg)](https://travis-ci.org/ivoba/console-service-provider)
+
 ## Credits
 This project is based on https://github.com/KnpLabs/ConsoleServiceProvider which is unmaintained.
 
