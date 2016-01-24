@@ -21,8 +21,6 @@ class ConsoleServiceProviderTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf(\Ivoba\Silex\Console\Application::class, $app['console']);
         $this->assertEquals(__DIR__.'/..', $app['console']->getProjectDirectory());
-
-        echo $app['console']
     }
 }
  
