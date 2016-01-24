@@ -12,7 +12,7 @@ Add `ivoba/console-service-provider` to your `composer.json` and register the se
 ```php
 <?php
 
-use Knp\Provider\ConsoleServiceProvider;
+use Ivoba\Silex\Provider\ConsoleServiceProvider;
 
 $app->register(new ConsoleServiceProvider(), [
     'console.name'              => 'MyApplication',
@@ -95,8 +95,8 @@ Example:
 <?php
 
 use My\Command\MyCommand;
-use Ivoba\Console\ConsoleEvents;
-use Ivoba\Console\ConsoleEvent;
+use Ivoba\Silex\Console\ConsoleEvents;
+use Ivoba\Silex\Console\ConsoleEvent;
 
 $app['dispatcher']->addListener(ConsoleEvents::INIT, function(ConsoleEvent $event) {
     $app = $event->getApplication();
