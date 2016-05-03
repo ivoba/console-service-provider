@@ -51,7 +51,7 @@ $ app/console my:command
 
 ## Write commands
 
-Your commands should extend `Ivoba\Command\Command` to have access to the 2 useful following commands:
+Your commands should extend `Ivoba\Silex\Command\Command` to have access to the 2 useful following commands:
 
 * `getSilexApplication`, which returns the silex application
 * `getProjectDirectory`, which returns your project's root directory (as configured earlier)
