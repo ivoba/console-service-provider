@@ -2,7 +2,8 @@
 
 namespace Ivoba\Silex\Provider;
 
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Silex\Application;
 use Ivoba\Silex\Console\Application as ConsoleApplication;
 use Ivoba\Silex\Console\ConsoleEvents;
@@ -17,9 +18,9 @@ class ConsoleServiceProvider implements ServiceProviderInterface
     /**
      * @param Application $app
      */
-    public function register(Application $app)
+    public function register(Container $app)
     {
-        $app['console'] = $app->share(function() use ($app) {
+        $app['console'] = $app->factory(function() use ($app) {
             $application = new ConsoleApplication(
                 $app,
                 $app['console.project_directory'],
